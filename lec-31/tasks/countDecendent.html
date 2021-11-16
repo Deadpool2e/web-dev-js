@@ -4,9 +4,9 @@
 <body>
 
     <ul>
-        <li>Animals
+        <li id="animals">Animals
             <ul>
-                <li>Mammals
+                <li id="mammals">Mammals
                     <ul>
                         <li>Cows</li>
                         <li>Donkeys</li>
@@ -14,7 +14,7 @@
                         <li>Tigers</li>
                     </ul>
                 </li>
-                <li>Other
+                <li id="others">Other
                     <ul>
                         <li>Snakes</li>
                         <li>Birds</li>
@@ -23,15 +23,15 @@
                 </li>
             </ul>
         </li>
-        <li>Fishes
+        <li id="fishes">Fishes
             <ul>
-                <li>Aquarium
+                <li id="aqu">Aquarium
                     <ul>
                         <li>Guppy</li>
                         <li>Angelfish</li>
                     </ul>
                 </li>
-                <li>Sea
+                <li id="sea">Sea
                     <ul>
                         <li>Sea trout</li>
                     </ul>
@@ -41,7 +41,21 @@
     </ul>
 
     <script>
-    // ... your code ...
+    // ... your code ..
+    const mammalsNo=Array.from(animals.children[0].children[0].children[0].children);
+    console.log("Animals:->")
+    console.log("Mammals:")
+    console.log(mammalsNo.length);
+    const others = Array.from(animals.children[0].children[1].children[0].children);
+    console.log("others:")
+    console.log(others.length);
+    const Aquarium = Array.from(fishes.children[0].children[0].children[0].children);
+    console.log("Fishes:->")
+    console.log("Aquarium:")
+    console.log(Aquarium.length);
+    const sea = Array.from(fishes.children[0].children[1].children[0].children);
+    console.log("others:")
+    console.log(sea.length);
     </script>
 
 </body>

@@ -18,5 +18,9 @@
                     2. It should not start with http://internal.com 
      -->
 </body>
-
+<script>
+    let selector = 'a[href*="://"]:not([href^="http://internal.com"])';
+    let links = document.querySelectorAll(selector);
+    links.forEach(link => link.style.color ="green");
+</script>
 </html>
